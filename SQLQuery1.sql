@@ -47,13 +47,14 @@ CREATE TABLE orders
 	qty INT NULL,
 	orig_price FLOAT NULL,
 	total_price FLOAT NULL,
-	order_date DATE NULL
+	order_date DATE NULL,
+	customer_id INT NULL
 )
 
 ALTER TABLE orders
 ADD customer_id INT NULL
 
-SELECT * FROM orders
+SELECT * FROM customers
 
 DELETE FROM orders;
 
@@ -78,6 +79,8 @@ CREATE TABLE creditCustomer
     order_date DATE NULL          
 )
 
+SELECT * FROM creditOrders
+
 CREATE TABLE creditOrders 
 (
 	id int PRIMARY KEY IDENTITY(1,1),
@@ -87,7 +90,8 @@ CREATE TABLE creditOrders
 	qty INT NULL,
 	orig_price FLOAT NULL,
 	total_price FLOAT NULL,
-	order_date DATE NULL
+	order_date DATE NULL,
+	customer_id INT NULL
 )
 
 SELECT * FROM creditOrders

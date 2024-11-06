@@ -444,7 +444,7 @@ namespace POSInventoryCreditSystem
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to pay your orders?",
+                if (MessageBox.Show("Are you sure you want to credit your orders?",
                     "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (checkConnection())
